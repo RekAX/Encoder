@@ -1,5 +1,0 @@
-import crypt
-has  = 'azer'
-t = crypt.crypt(has)
-
-print(t)
